@@ -97,7 +97,10 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
+.content-wrapper {
+  width: 90%;
+  margin: 50px 0;
+}
 /******************* BASE HEADER & FOOTER STYLES*****************/ 
 
 header, 
@@ -382,22 +385,20 @@ aside {
 /* HEADER */ 
 
 header {
-  display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  padding: 33px 0; 
 }
 
 header .content-wrapper {
   width: 100%;
-  display: flex; 
   justify-content: space-between;
 }
 
 header nav {
-  width: 30%;
+  width: 20%;
 }
 
 header nav ul {
-  display:flex; 
   justify-content: space-between;
 }
 
@@ -412,8 +413,8 @@ header nav ul {
 aside .content-wrapper {
   margin: 50px 0; 
   display: flex;
-  justify-content: space-around; 
-  flex-flow: row nowrap; 
+  justify-content: space-between; 
+  flex-flow: row wrap; 
 }
 
 aside .content-wrapper .form-description, 
@@ -426,9 +427,9 @@ aside .content-wrapper .form {
 .features article {
   display: flex; 
   justify-content: center;
-  flex-flow: row wrap; 
-  width: 50%;
-  flex-basis: auto; 
+  align-items: center;
+  flex-flow: column wrap; 
+  flex-basis: 50%; 
 }
 .features .features-item-description {
   width: 50%;
@@ -446,39 +447,32 @@ aside .content-wrapper .form {
 }
 /* Footer */ 
 footer .content-wrapper {
-  width: 100%;
+  width: 65%;
   margin: 100px 0; 
 }
 
 .footer-content {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
 footer .contact{
   margin-bottom: 0; 
-  text-align: center; 
 }
 
 footer .copyright {
-  width: 25%;
-  padding-bottom: 10px; 
+  width: 100%;
 }
 
-/******************** FAQ PAGE ****************/ 
-
-.faq-content {
-  flex-basis: 50%; 
-}
 
 /********************ABOUT PAGE ***************/
 
 .mission-content {
   display: flex; 
   justify-content: space-between;
-  align-items: flex-start; 
-  margin: 36px 0 95px 0; 
+  align-items: center; 
+  padding-top: 20px;  
 }
 
 .mission-content p {
@@ -486,15 +480,27 @@ footer .copyright {
 }
 
 .contact-section .content-wrapper h2 {
-  width: 768px;
-  margin-bottom:0;
+  width: 80%;
 }
 
 .contact-content {
   display: flex; 
   justify-content: space-between;
   align-items: flex-start;
-  margin: 50px 65px 100px 0;
+}
+
+/******************** FAQ PAGE ****************/ 
+
+.faq .content-wrapper {
+  justify-content: space-between;
+}
+
+.faq-content {
+  flex-basis: 40%;
+}
+
+.faq h2 {
+  width: 100%;
 }
 }
 
