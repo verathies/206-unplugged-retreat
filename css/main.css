@@ -512,72 +512,38 @@ footer .copyright {
 /* General styles */ 
 .content-wrapper {
   max-width: 960px; 
-  margin: 100px 0; 
-}
-/* HEADER */ 
-
-header {
-  justify-content: space-around;
-  padding: 33px 0; 
-}
-
-header .content-wrapper {
-  width: 100%;
-  justify-content: space-between;
-}
-
-header nav {
-  width: 20%;
-}
-
-header nav ul {
-  justify-content: space-between;
-}
-
-.header-divider {
-  display: none; 
 }
 
 /* Hero Area */ 
-
+.hero-area h1 {
+  width: 60%;
+}
 /* Aside */ 
 
 aside .content-wrapper {
-  margin: 50px 0; 
-  display: flex;
-  justify-content: space-between; 
-  flex-flow: row wrap; 
+  justify-content: space-around; 
 }
 
 aside .content-wrapper .form-description, 
 aside .content-wrapper .form {
-  width: 26%; 
-  margin: 0; 
+  width: 30%; 
 }
 
 /* Features */
-.features article {
-  display: flex; 
-  justify-content: center;
-  align-items: center;
-  flex-flow: column wrap; 
-  flex-basis: 30%; 
+
+.features h2 {
+  width: 90%;
 }
-.features .features-item-description {
-  width: 50%;
+.features article {
+  flex-basis: 33%; 
 }
 
 /* Reviews */ 
 
-.reviews article {
-  display: flex; 
-  justify-content: space-around;
-}
-
 .reviews article div {
-  width: 50%;
+  width: 42%;
 }
-/* Footer */ 
+/* Footer not needed in solution but I think they should be added
 footer .content-wrapper {
   width: 65%;
   margin: 100px 0; 
@@ -592,14 +558,26 @@ footer .content-wrapper {
 
 footer .contact{
   margin-bottom: 0; 
-}
+}  
 
 footer .copyright {
   width: 100%;
   text-align: center;
+} */
+
+/************** ABOUT PAGE ****************/ 
+
+.mission h2, 
+.contact-section .content-wrapper h2 {
+  width: 95%;
 }
 
+
+/************** FAQ PAGE ****************/ 
+.faq h2 {
+  width: 100%; 
 }
+
 
 /* ==========================================================================
    Print styles.
