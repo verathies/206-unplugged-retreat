@@ -97,6 +97,71 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+/* General Styles */
+ 
+html {
+	font-size: 16px; 
+}
+ 
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  color: #e2e3ed;
+}
+ 
+ul, 
+ol {
+ font-size: 1.125em;
+ text-transform: uppercase;
+ list-style-type: none;
+}
+ 
+a {
+  color: #e2e3ed;
+  text-decoration: none;	
+}
+/* I added styles for h1, they're not mentioned yet in the instruction */ 
+
+h1 {
+  font-size: 3.75em;
+  font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.25em;
+}
+ 
+h3, 
+h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.875em; 
+}
+ 
+p {
+  font-size: 1.125em; 
+  color: #d0d2db;
+  line-height: 24px;
+}
+ 
+img {
+ 
+}
+ 
+figure {
+ 
+}
+ 
+address  h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.875em;
+}
+address p, 
+address a{
+  color: #d4d4d4;
+  font-size: 1.125em;
+}
 .content-wrapper {
   width: 90%;
   margin: 50px 0;
