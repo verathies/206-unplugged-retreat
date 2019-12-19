@@ -107,6 +107,7 @@ html {
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
+  text-align: left;
   color: #e2e3ed;
 }
  
@@ -115,58 +116,48 @@ ol {
  font-size: 1.125em;
  text-transform: uppercase;
  list-style-type: none;
+ font-weight: bold;
 }
  
 a {
   color: #e2e3ed;
   text-decoration: none;	
+  font-size: .875em;
 }
 /* I added styles for h1, they're not mentioned yet in the instruction */ 
 
 h1 {
-  font-size: 3.75em;
+  font-size: 2.25em;
   font-family: 'Poppins', sans-serif;
 }
 
 h2 {
   font-family: 'Poppins', sans-serif;
-  font-size: 2.25em;
+  font-size: 1.875em;
+ 
 }
  
 h3, 
 h4 {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.875em; 
+  font-size: 1.125em; 
+  margin: 20px 0;
 }
  
 p {
-  font-size: 1.125em; 
-  color: #d0d2db;
-  line-height: 24px;
+  font-size: .875em; 
+  line-height: 1.285;
 }
- 
-img {
- 
-}
- 
-figure {
- 
-}
- 
-address  h4 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.875em;
-}
-address p, 
-address a{
-  color: #d4d4d4;
-  font-size: 1.125em;
+
+address {
+  font-style: normal;
+  text-align: center; 
 }
 .content-wrapper {
   width: 90%;
   margin: 50px 0;
 }
-/******************* BASE HEADER & FOOTER STYLES*****************/ 
+/******************* BASE HEADER & FOOTER STYLES  -- MOBILE FIRST  *****************/ 
 
 header, 
 footer {
@@ -174,6 +165,7 @@ footer {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;  
+  background-color: #202322;
 }
 
 header {
@@ -192,6 +184,7 @@ header .content-wrapper {
   width: 100%;
   height: 1px; 
   margin: 10px 0 20px 0; 
+  background-color: #999;
 }
 
 header nav {
@@ -205,7 +198,8 @@ header nav {
 header nav ul {
   display: flex; 
   justify-content: space-around;
-  width: 100%;       
+  width: 100%;    
+  padding-left: 0;   
 }
 
 footer {
@@ -225,6 +219,10 @@ footer .contact {
   margin-bottom: 50px; 
 }
 
+footer .social {
+  text-align: center; /* <--------------------- I added this ,not in the solution code*/
+}
+
 footer .social-icon {
   display: flex; 
   justify-content: space-around;
@@ -241,7 +239,7 @@ footer .copyright {
   margin: 20px 0; 
   text-align: center;
 }
-/************************** MOBILE STYLES -- HOMEPAGE**************/
+/************************** MOBILE STYLES -- HOMEPAGE  **************/
 
 /* HERO AREA */
 .hero-area {
@@ -257,6 +255,7 @@ aside {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap; 
+  background-color: #527158;
 }
 
 /* FEATURES */
@@ -292,6 +291,7 @@ aside {
   display: flex; 
   justify-content: center;
   flex-flow: row wrap; 
+  background-color: #2a423a;
 } 
 
 .reviews h2 {
@@ -303,13 +303,14 @@ aside {
   margin: 20px 0; 
 }
 
-/************************************* ABOUT PAGE ***********************/
+/************************************* ABOUT PAGE-- MOBILE***********************/
 
 .mission {
   display: flex; 
   justify-content: center;
   align-items: center;
   flex-flow: row wrap; 
+  background-color: #527158;
 } 
 
 .contact-section {
@@ -317,19 +318,21 @@ aside {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap; 
+  background-color: #2a423a;
 } 
 
 .contact-content p {
   margin: 0; 
 }
 
-/********************************** FAQ PAGE *****************************/
+/********************************** FAQ PAGE-- MOBILE *****************************/
 
 .faq {
   display: flex; 
   justify-content: center;
   align-items: center;
   flex-flow: row wrap; 
+  background-color: #527158;
 } 
 
 .faq .content-wrapper {
@@ -438,6 +441,34 @@ aside {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+   aside .form {
+    margin-top: 30px;
+  }
+   
+  input[type=text] {
+    box-sizing: border-box;
+    width: 100%;
+    color: #2a423a;
+    font-style: italic;
+    padding: 1em;
+  }
+   
+  input[type=button] {
+    width: 100%;
+    padding: 20px 0;
+    margin-top: 20px;
+    background-color: #2a423a;
+    font-family: 'Poppins', Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 1.125em;
+    color: #e2e3ed;
+    border: none;
+    text-align: center;
+    text-transform: uppercase;
+  }
+/***************************************************************************************************************
+                                    MEDIA QUERIES 
+ ***************************************************************************************************************/                                 
 
 @media only screen and (min-width: 768px) {
 /* Tablet breakpoint */ 
@@ -486,7 +517,7 @@ aside .content-wrapper {
 aside .content-wrapper .form-description, 
 aside .content-wrapper .form {
   width: 40%; 
-  margin: 0; 
+  margin: 0;
 }
 
 /* Features */
@@ -519,8 +550,8 @@ footer .content-wrapper {
 
 .footer-content {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-around;
+  align-items: center; 
 }
 
 footer .contact{
