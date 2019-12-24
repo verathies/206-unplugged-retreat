@@ -246,11 +246,19 @@ footer .social-icon p {
   display: flex; 
   justify-content: center;
   align-items: center;
+  background-color: #527158;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
 }
-                
+
+footer .social-icon i {
+  font-size: 1.3125em;
+}           
 footer .copyright {
   margin: 20px 0; 
 }
+
 /************************** MOBILE STYLES -- HOMEPAGE  **************/
 
 /* HERO AREA */
@@ -672,6 +680,10 @@ footer .copyright {
   width: 100%;
 }
 
+footer .social-icon {
+  justify-content: space-between;
+  width: 12.5em;
+}
 
 /********************ABOUT PAGE - TABLET ***************/
 
