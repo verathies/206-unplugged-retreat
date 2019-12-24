@@ -148,6 +148,14 @@ address {
   width: 90%;
   margin: 50px 0;
 }
+
+img { 
+	width: 100%;
+}
+ 
+figure {
+        margin: 0;
+}
 /******************* BASE HEADER & FOOTER STYLES  -- MOBILE FIRST  *****************/ 
 
 header, 
@@ -169,6 +177,14 @@ header .content-wrapper {
   align-items: center;
   flex-flow: row wrap; 
   margin: 0; 
+}
+
+header figure {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
 }
 
 .header-divider {
@@ -242,6 +258,11 @@ footer .copyright {
   display: flex; 
   justify-content: center;
   flex-flow: row wrap; 
+  background: url('../img/hero.jpg') #333;
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+  
 } 
 .hero-area h1 {
   font-size: 2.25em;
@@ -293,6 +314,9 @@ input[type=button] {
   display: flex; 
   justify-content: center;
   flex-flow: row wrap; 
+  background: url('../img/features.jpg') #333;
+  background-size: cover;
+  background-position: center;
 }
 
 .features h2 {
@@ -328,7 +352,13 @@ input[type=button] {
   margin-bottom: 40px; 
   line-height: 1;
 }
-
+.reviews figure {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
 .reviews h3 {
   width: 55%; 
   margin: 20px 0; 
@@ -573,12 +603,17 @@ aside .content-wrapper .form {
 .reviews article {
   display: flex; 
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .reviews h2 {
   width: 85%;
 }
 
+.reviews figure {
+  width: 49%;
+  padding-top: 7px;
+}
 .reviews article div {
   width: 49%;
 }
@@ -674,6 +709,10 @@ footer .copyright {
 header {
   padding: 15px 0;
 }
+
+.hero-area {
+  min-height: 775px;
+}
 .content-wrapper {
   max-width: 960px; 
 }
@@ -696,6 +735,9 @@ header a {
   font-size: 1.125em;
 } 
 
+header figure {
+  width: 30%;
+}
 
 /* Hero Area */ 
 .hero-area h1 {
@@ -734,6 +776,10 @@ aside .content-wrapper .form {
 }
 .reviews article div {
   width: 42%;
+}
+
+.reviews figure {
+  width: 54%;
 }
 
 footer h4 {
