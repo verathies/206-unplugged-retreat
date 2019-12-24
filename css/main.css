@@ -13,7 +13,7 @@
 
 html {
   color: #222;
-  font-size: 1em;
+  font-size: 16px;
   line-height: 1.4;
 }
 
@@ -105,36 +105,27 @@ html {
 }
  
 body {
-  font-family: 'Open Sans', sans-serif;
   font-size: 1em;
-  text-align: left;
+  font-family: 'Open Sans', sans-serif;
   color: #e2e3ed;
+  text-align: left;
 }
  
 ul, 
 ol {
- font-size: 1.125em;
- text-transform: uppercase;
- list-style-type: none;
- font-weight: bold;
+  list-style-type: none;
 }
  
 a {
   color: #e2e3ed;
   text-decoration: none;	
-  font-size: .875em;
-}
-/* I added styles for h1, they're not mentioned yet in the instruction */ 
-
-h1 {
-  font-size: 2.25em;
-  font-family: 'Poppins', sans-serif;
+        /* not in the solution code */ font-size: .875em; 
 }
 
 h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.875em;
- 
+  font-weight: 500;
 }
  
 h3, 
@@ -142,6 +133,7 @@ h4 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.125em; 
   margin: 20px 0;
+  font-weight: 500;
 }
  
 p {
@@ -151,7 +143,6 @@ p {
 
 address {
   font-style: normal;
-  text-align: center; 
 }
 .content-wrapper {
   width: 90%;
@@ -184,7 +175,7 @@ header .content-wrapper {
   width: 100%;
   height: 1px; 
   margin: 10px 0 20px 0; 
-  background-color: #999;
+  background: #3a3a3a;
 }
 
 header nav {
@@ -193,17 +184,27 @@ header nav {
   align-items: center;
   flex-flow: row wrap;  
   width: 60%; 
+  font-weight: 700;
+  font-size: 1.125em;
+  text-transform: uppercase;
 }
 
 header nav ul {
   display: flex; 
   justify-content: space-around;
-  width: 100%;    
+  width: 100%;   
+
+  /*  the below styles are not in the solution code . I prefer my layout*/ 
   padding-left: 0;   
+}
+
+header nav ul li {
+  font-size: 1.125em;
 }
 
 footer {
   flex-direction: column; 
+  text-align: center;
 }
 
 footer p {
@@ -217,10 +218,6 @@ footer.content-wrapper {
 
 footer .contact {
   margin-bottom: 50px; 
-}
-
-footer .social {
-  text-align: center; /* <--------------------- I added this ,not in the solution code*/
 }
 
 footer .social-icon {
@@ -237,7 +234,6 @@ footer .social-icon p {
                 
 footer .copyright {
   margin: 20px 0; 
-  text-align: center;
 }
 /************************** MOBILE STYLES -- HOMEPAGE  **************/
 
@@ -247,6 +243,13 @@ footer .copyright {
   justify-content: center;
   flex-flow: row wrap; 
 } 
+.hero-area h1 {
+  font-size: 2.25em;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500; 
+  line-height: 1.2; 
+}
+
 
 /* ASIDE */
 
@@ -256,6 +259,32 @@ aside {
   align-items: center;
   flex-flow: row wrap; 
   background-color: #527158;
+}
+
+aside .form {
+  margin-top: 30px;
+}
+ 
+input[type=text] {
+  box-sizing: border-box;
+  width: 100%;
+  color: #2a423a;
+  font-style: italic;
+  padding: 1em;
+}
+ 
+input[type=button] {
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 20px;
+  background-color: #2a423a;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #e2e3ed;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 /* FEATURES */
@@ -271,7 +300,7 @@ aside {
 }
 
 .features article {
-  width: 55%; 
+  width: 63%; 
   margin: 30px 0; 
 }
 .features .features-items {
@@ -283,6 +312,7 @@ aside {
 
 .features p {
   margin: 0; 
+  text-align: center;
 }
 
 /* REVIEWS */
@@ -296,6 +326,7 @@ aside {
 
 .reviews h2 {
   margin-bottom: 40px; 
+  line-height: 1;
 }
 
 .reviews h3 {
@@ -345,13 +376,16 @@ aside {
 
 .faq h2 {
   margin-bottom: 40px; 
+  line-height: 1;
 }
 
 .faq-content {
   margin-bottom: 50px; 
 }
 
-
+.faq-content h4 {
+  line-height: 1.333;
+}
 
 /* ==========================================================================
    Helper classes
@@ -441,31 +475,7 @@ aside {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-   aside .form {
-    margin-top: 30px;
-  }
-   
-  input[type=text] {
-    box-sizing: border-box;
-    width: 100%;
-    color: #2a423a;
-    font-style: italic;
-    padding: 1em;
-  }
-   
-  input[type=button] {
-    width: 100%;
-    padding: 20px 0;
-    margin-top: 20px;
-    background-color: #2a423a;
-    font-family: 'Poppins', Helvetica, Arial, sans-serif;
-    font-weight: 500;
-    font-size: 1.125em;
-    color: #e2e3ed;
-    border: none;
-    text-align: center;
-    text-transform: uppercase;
-  }
+
 /***************************************************************************************************************
                                     MEDIA QUERIES 
  ***************************************************************************************************************/                                 
@@ -477,6 +487,15 @@ aside {
 .content-wrapper {
   max-width: 640px; 
   margin: 100px 0; 
+}
+h2 {
+  font-size: 2.25em;
+  line-height: 1.333;
+}
+h3
+  {
+  font-size: 1.5em;
+  line-height: 1.25;
 }
 
 /* HEADER */ 
@@ -491,8 +510,13 @@ header .content-wrapper {
   justify-content: space-between;
 }
 
+header figure {
+  width: 30%;
+}
+
 header nav {
   width: 20%;
+     /*not in solution*/     font-size: 1em;
 }
 
 header nav ul {
@@ -504,6 +528,12 @@ header nav ul {
 }
 
 /* Hero Area */ 
+
+.hero-area h1 {
+  font-size: 3em;
+  line-height: 1;
+  margin: 0;
+}
 
 /* Aside */ 
 
@@ -520,7 +550,13 @@ aside .content-wrapper .form {
   margin: 0;
 }
 
+
+
 /* Features */
+
+.features h2 {
+  margin-bottom: 20px;
+}
 .features article {
   display: flex; 
   justify-content: center;
@@ -529,38 +565,56 @@ aside .content-wrapper .form {
   flex-basis: 50%; 
 }
 .features .features-item-description {
-  width: 50%;
+  width: 62%;
 }
 
 /* Reviews */ 
 
 .reviews article {
   display: flex; 
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+.reviews h2 {
+  width: 85%;
 }
 
 .reviews article div {
-  width: 50%;
+  width: 49%;
 }
+
+.reviews h3 {
+  width: 75%; 
+  margin: 0; 
+}
+
 /* Footer */ 
 footer .content-wrapper {
   width: 65%;
   margin: 100px 0; 
 }
 
-.footer-content {
+footer .footer-content {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center; 
+  flex-direction: row;
 }
 
 footer .contact{
   margin-bottom: 0; 
 }
 
+footer h4 {
+  font-size: 1.5em;
+  margin-bottom: 40px;
+}
+
+footer p {
+  line-height: 1.285;
+}
 footer .copyright {
   width: 100%;
-  text-align: center;
 }
 
 
@@ -587,6 +641,10 @@ footer .copyright {
   align-items: flex-start;
 }
 
+.contact-content h4 {
+  font-size: 1.5em;
+}
+
 /******************** FAQ PAGE ****************/ 
 
 .faq .content-wrapper {
@@ -594,7 +652,13 @@ footer .copyright {
 }
 
 .faq-content {
-  flex-basis: 40%;
+  flex-basis: 45%;
+}
+
+.faq h4, 
+.faq p {
+  font-size: .875em;
+  line-height: 1.125;
 }
 
 .faq h2 {
@@ -606,14 +670,39 @@ footer .copyright {
 /* Desktop breakpoint*/
 
 /* General styles */ 
+
+header {
+  padding: 15px 0;
+}
 .content-wrapper {
   max-width: 960px; 
 }
 
+h2 {
+  font-size: 2.25em;
+}
+
+h3, 
+h4 {
+  font-size: 1.875em;
+}
+
+p {
+  font-size: 1.125em;
+  line-height: 1.333;
+}
+
+header a {
+  font-size: 1.125em;
+} 
+
+
 /* Hero Area */ 
 .hero-area h1 {
   width: 60%;
+  font-size: 3.75em;
 }
+
 /* Aside */ 
 
 aside .content-wrapper {
@@ -623,6 +712,10 @@ aside .content-wrapper {
 aside .content-wrapper .form-description, 
 aside .content-wrapper .form {
   width: 30%; 
+}
+
+.form-description p {
+  font-size: 1.125em;
 }
 
 /* Features */
@@ -636,44 +729,41 @@ aside .content-wrapper .form {
 
 /* Reviews */ 
 
+.reviews h2 {
+  padding-bottom: 50px;
+}
 .reviews article div {
   width: 42%;
 }
-/* Footer not needed in solution but I think they should be added
-footer .content-wrapper {
-  width: 65%;
-  margin: 100px 0; 
+
+footer h4 {
+  font-size: 1.875em;
 }
 
-.footer-content {
-  display: flex;
-  justify-content:space-between;
-  align-items: flex-start;
-  text-align: center;
-}
-
-footer .contact{
-  margin-bottom: 0; 
-}  
-
-footer .copyright {
-  width: 100%;
-  text-align: center;
-} */
 
 /************** ABOUT PAGE ****************/ 
 
 .mission h2, 
 .contact-section .content-wrapper h2 {
   width: 95%;
+  font-size: 3em;
 }
 
+.contact-content h4 {
+  font-size: 1.875em;
+}
 
 /************** FAQ PAGE ****************/ 
 .faq h2 {
   width: 100%; 
+  font-size: 3em;
 }
 
+.fa4 h4, 
+.faq p {
+  font-size: 1.125em;
+  line-height: 1;
+}
 
 /* ==========================================================================
    Print styles.
