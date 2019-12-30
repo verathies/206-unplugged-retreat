@@ -574,7 +574,7 @@ header figure {
 
 header nav {
   width: 20%;
-     /*not in solution*/     font-size: 1em;
+  font-size: 1em;  /*not in solution*/     
 }
 
 header nav ul {
@@ -586,7 +586,9 @@ header nav ul {
 }
 
 /* Hero Area */ 
-
+.hero-area {
+  min-height: 600px;
+}
 .hero-area h1 {
   font-size: 3em;
   line-height: 1;
@@ -626,12 +628,14 @@ aside .content-wrapper .form {
   width: 62%;
 }
 
+.features i {
+  margin-bottom: 30px;
+}
 /* Reviews */ 
 
 .reviews article {
   display: flex; 
   justify-content: space-between;
-  align-items: flex-start;
 }
 
 .reviews h2 {
@@ -640,7 +644,7 @@ aside .content-wrapper .form {
 
 .reviews figure {
   width: 49%;
-  padding-top: 7px;
+  padding-top: 7px; /*not in solution code*/
 }
 .reviews article div {
   width: 49%;
@@ -676,14 +680,16 @@ footer h4 {
 footer p {
   line-height: 1.285;
 }
-footer .copyright {
-  width: 100%;
-}
 
 footer .social-icon {
   justify-content: space-between;
   width: 12.5em;
 }
+
+footer .copyright {
+  width: 100%;
+}
+
 
 /********************ABOUT PAGE - TABLET ***************/
 
@@ -696,6 +702,10 @@ footer .social-icon {
 
 .mission-content p {
   width: 45%; 
+}
+
+.map figure {
+  padding-bottom: 45.5%;
 }
 
 .contact-section .content-wrapper h2 {
@@ -711,9 +721,7 @@ footer .social-icon {
 .contact-content h4 {
   font-size: 1.5em;
 }
-.map figure {
-  padding-bottom: 45.5%;
-}
+
 /******************** FAQ PAGE - TABLET ****************/ 
 
 .faq .content-wrapper {
@@ -744,9 +752,6 @@ header {
   padding: 15px 0;
 }
 
-.hero-area {
-  min-height: 775px;
-}
 .content-wrapper {
   max-width: 960px; 
 }
@@ -766,17 +771,20 @@ p {
 }
 
 header a {
-  font-size: 1.125em;
+  font-size: 1.125em; /*not in solution code */
 } 
 
 header figure {
-  width: 30%;
+  width: 30%;  /*not in solution code*/
 }
 
 /* Hero Area */ 
 .hero-area h1 {
-  width: 60%;
+  width: 80%;
   font-size: 3.75em;
+}
+.hero-area {
+  min-height: 775px; /*not in solution code */
 }
 
 /* Aside */ 
